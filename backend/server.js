@@ -1,5 +1,4 @@
-import dotenv from 'dotenv'
-dotenv.config()
+import 'dotenv/config.js'
 
 import http, { createServer } from 'http'
 import app from './app.js';
