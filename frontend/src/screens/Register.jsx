@@ -1,0 +1,45 @@
+import { Link } from "react-router-dom";
+
+export default function Register() {
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-gray-900 px-4">
+      <div className="bg-gray-800 p-8 rounded-2xl shadow-lg w-full max-w-md">
+        <h2 className="text-3xl font-bold text-white text-center mb-6">Register</h2>
+
+        <form className="space-y-5">
+          <div className="flex flex-col">
+            <label className="text-gray-300 mb-1">Email</label>
+            <input
+              type="email"
+              className="px-4 py-2 rounded-lg bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:border-blue-500"
+              placeholder="Enter your email"
+            />
+          </div>
+
+          <div className="flex flex-col">
+            <label className="text-gray-300 mb-1">Password</label>
+            <input
+              type="password"
+              className="px-4 py-2 rounded-lg bg-gray-700 text-white placeholder-gray-400 border border-gray-600 focus:outline-none focus:border-blue-500"
+              placeholder="Enter your password"
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="w-full py-2 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition-all"
+          >
+            Register
+          </button>
+        </form>
+
+        <p className="text-gray-400 text-center mt-5">
+          Already have an account?{" "}
+          <Link to="/login" className="text-blue-400 hover:underline">
+            Login
+          </Link>
+        </p>
+      </div>
+    </div>
+  );
+}
