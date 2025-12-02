@@ -12,6 +12,10 @@ router.post('/create',
     projectController.createProject
 )
 
+router.post(('/all',
+    authMiddleware.authUser,
+    projectController.getAllProject
+))
 
 
 
