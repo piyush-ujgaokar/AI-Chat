@@ -50,7 +50,7 @@ export const createLoginController= async (req,res)=>{
 
         const isMatch=await user.isValidPassword(password)
          if(!isMatch){
-          return res.statue(401).json({
+          return res.status(401).json({
             errors:"Invalid credentials"
            })
         }
