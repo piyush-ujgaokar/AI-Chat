@@ -12,10 +12,10 @@ router.post('/create',
     projectController.createProject
 )
 
-router.post(('/all',
+router.get('/all',
     authMiddleware.authUser,
     projectController.getAllProject
-))
+)
 
 
 
